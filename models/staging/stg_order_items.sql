@@ -12,4 +12,4 @@ SELECT
     TO_TIMESTAMP_NTZ(delivered_at, 'YYYY-MM-DD HH24:MI:SS') AS delivered_at,
     TO_TIMESTAMP_NTZ(returned_at, 'YYYY-MM-DD HH24:MI:SS') AS returned_at,
     sale_price
-FROM {{ source('elook_commerce', 'order_items') }}
+FROM ELOOK_COMMERCE.DBT_RSANJAYDESAI.order_items

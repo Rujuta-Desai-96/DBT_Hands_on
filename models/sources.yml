@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: elook_commerce
     database: ELOOK_COMMERCE
-    schema: RAW
+    schema: DBT_RSANJAYDESAI
     tables:
       - name: users
       - name: orders

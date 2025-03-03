@@ -10,4 +10,4 @@ SELECT
     department,
     sku,
     distribution_center_id
-FROM {{ source('elook_commerce', 'products') }}
+FROM ELOOK_COMMERCE.DBT_RSANJAYDESAI.products
