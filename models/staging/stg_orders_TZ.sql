@@ -86,4 +86,4 @@ select
                 ))
             ) AS returned_at_tz
 
-            from {{ ref("stg_orders")}}
+            from {{ ref("mart_orders")}}

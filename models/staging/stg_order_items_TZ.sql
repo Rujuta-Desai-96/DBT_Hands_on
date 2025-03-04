@@ -89,7 +89,7 @@ with utc_dates as
 
         sale_price
 
-        from {{ ref("stg_order_items")}}
+        from {{ ref("mart_order_items")}}
     )
 
 select * from utc_dates
