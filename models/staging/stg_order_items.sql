@@ -1,15 +1,14 @@
-{{ config(materialized='view') }}
+{{ config(materialized = 'table') }}
 
-SELECT
-    id AS order_item_id,
-    order_id,
-    user_id,
-    product_id,
-    inventory_item_id,
-    status,
-    TO_TIMESTAMP_NTZ(created_at, 'YYYY-MM-DD HH24:MI:SS') AS created_at,
-    TO_TIMESTAMP_NTZ(shipped_at, 'YYYY-MM-DD HH24:MI:SS') AS shipped_at,
-    TO_TIMESTAMP_NTZ(delivered_at, 'YYYY-MM-DD HH24:MI:SS') AS delivered_at,
-    TO_TIMESTAMP_NTZ(returned_at, 'YYYY-MM-DD HH24:MI:SS') AS returned_at,
-    sale_price
-FROM ELOOK_COMMERCE.DBT_RSANJAYDESAI.order_items
+select ID ,
+	ORDER_ID ,
+	USER_ID ,
+	PRODUCT_ID ,
+	INVENTORY_ITEM_ID ,
+	STATUS ,
+	CREATED_AT ,
+	SHIPPED_AT ,
+	DELIVERED_AT ,
+	RETURNED_AT ,
+	SALE_PRICE 
+    from elook_commerce.dbt_rsanjaydesai.order_items
