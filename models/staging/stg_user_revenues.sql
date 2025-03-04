@@ -1,29 +1,3 @@
--- WITH order_revenues AS (
---     SELECT
---         oi.user_id,
---         SUM(oi.sale_price) AS TotalAmountSpent
---     FROM
---         {{ ref('mart_order_items') }} oi
---     JOIN
---         {{ ref('mart_orders') }} o ON oi.order_id = o.order_id
---     WHERE
---         o.status NOT IN ('Cancelled', 'Returned') 
---         AND oi.status NOT IN ('Cancelled', 'Returned') 
---     GROUP BY
---         oi.user_id
--- )
-
--- SELECT
---     u.first_name AS FirstName,
---     u.last_name AS LastName,
---     r.TotalAmountSpent
--- FROM
---     order_revenues r
--- JOIN
---     {{ ref('mart_users') }} u ON r.user_id = u.id
--- ORDER BY
---     r.TotalAmountSpent DESC
--- LIMIT 5;
 
 
 With 
