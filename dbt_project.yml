@@ -39,3 +39,5 @@ models:
       materialized: table
     cleaning:
       materialized: table
+    marts:
+      materialized: table
