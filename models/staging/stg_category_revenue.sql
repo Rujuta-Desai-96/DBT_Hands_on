@@ -19,6 +19,6 @@ on p_product.product_id = o_items.product_id
 
 GROUP BY p_product.category
 ORDER BY sum(sale_price) DESC
-LIMIT 5
+
 
 

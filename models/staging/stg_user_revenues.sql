@@ -27,6 +27,5 @@ WHERE o.status NOT IN ('Cancelled', 'Returned')
 GROUP BY u.First_Name, u.Last_Name, u.USER_ID
 ORDER BY SUM(o.sale_price) DESC
 
-LIMIT 5
 
 
