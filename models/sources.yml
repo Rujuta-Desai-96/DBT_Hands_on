@@ -5,7 +5,7 @@ sources:
     database: ELOOK_COMMERCE
     schema: DBT_RSANJAYDESAI
     tables:
-      - name: users
+      - name: mart_users
       - name: orders
       - name: products
       - name: order_items
